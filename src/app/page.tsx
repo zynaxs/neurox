@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
+import SignupModal from "@/components/auth/SignupModal";
+import LoginModal from "@/components/auth/LoginModal";
+import ForgotPasswordModal from "@/components/auth/ForgotPasswordModal";
 
 // Translations
 const translations = {
@@ -72,6 +75,42 @@ const translations = {
     inStock: "In Stock",
     outOfStock: "Out of Stock",
     businessDays: "business days",
+    username: "Username",
+    confirmPassword: "Confirm Password",
+    invalidEmail: "Please enter a valid email address",
+    usernameExists: "Username already exists",
+    usernameAvailable: "Username available!",
+    passwordsDontMatch: "Passwords don't match",
+    registerAsSeller: "Register as Seller",
+    startSellingImmediately: "Start selling products immediately",
+    storeNamePlaceholder: "Your Store Name",
+    agreeToTerms: "I agree to the",
+    termsOfService: "Terms of Service",
+    and: "and",
+    privacyPolicy: "Privacy Policy",
+    creatingAccount: "Creating Account...",
+    alreadyHaveAccount: "Already have an account?",
+    login: "Log in",
+    accountCreated: "Account Created Successfully!",
+    verificationEmailSent: "A verification email has been sent to:",
+    checkEmailInbox: "Please check your inbox and click the verification link to activate your account.",
+    gotIt: "Got it!",
+    continueWithGoogle: "Continue with Google",
+    continueWithApple: "Continue with Apple",
+    orContinueWith: "Or continue with email",
+    forgotPassword: "Forgot password?",
+    loggingIn: "Logging in...",
+    dontHaveAccount: "Don't have an account?",
+    signUp: "Sign up",
+    fillAllFields: "Please fill all fields",
+    checkYourEmail: "Check Your Email",
+    resetLinkSent: "We've sent a password reset link to:",
+    resetLinkInstructions: "Click the link in the email to reset your password. The link will expire in 24 hours.",
+    backToLogin: "Back to Log In",
+    close: "Close",
+    forgotPasswordInstructions: "Enter your email address and we'll send you a link to reset your password.",
+    sendResetLink: "Send Reset Link",
+    sendingLink: "Sending link...",
   },
   pt: {
     appName: "NEUROX",
@@ -136,6 +175,42 @@ const translations = {
     inStock: "Em Estoque",
     outOfStock: "Sem Estoque",
     businessDays: "dias úteis",
+    username: "Nome de Usuário",
+    confirmPassword: "Confirmar Senha",
+    invalidEmail: "Por favor, insira um email válido",
+    usernameExists: "Nome de usuário já existe",
+    usernameAvailable: "Nome de usuário disponível!",
+    passwordsDontMatch: "As senhas não coincidem",
+    registerAsSeller: "Registrar como Vendedor",
+    startSellingImmediately: "Comece a vender produtos imediatamente",
+    storeNamePlaceholder: "Nome da Sua Loja",
+    agreeToTerms: "Eu concordo com os",
+    termsOfService: "Termos de Serviço",
+    and: "e",
+    privacyPolicy: "Política de Privacidade",
+    creatingAccount: "Criando Conta...",
+    alreadyHaveAccount: "Já tem uma conta?",
+    login: "Entrar",
+    accountCreated: "Conta Criada com Sucesso!",
+    verificationEmailSent: "Um email de verificação foi enviado para:",
+    checkEmailInbox: "Por favor, verifique sua caixa de entrada e clique no link de verificação para ativar sua conta.",
+    gotIt: "Entendi!",
+    continueWithGoogle: "Continuar com Google",
+    continueWithApple: "Continuar com Apple",
+    orContinueWith: "Ou continue com email",
+    forgotPassword: "Esqueceu a senha?",
+    loggingIn: "Entrando...",
+    dontHaveAccount: "Não tem uma conta?",
+    signUp: "Cadastre-se",
+    fillAllFields: "Por favor, preencha todos os campos",
+    checkYourEmail: "Verifique Seu Email",
+    resetLinkSent: "Enviamos um link de redefinição de senha para:",
+    resetLinkInstructions: "Clique no link no email para redefinir sua senha. O link expirará em 24 horas.",
+    backToLogin: "Voltar para Login",
+    close: "Fechar",
+    forgotPasswordInstructions: "Digite seu endereço de email e enviaremos um link para redefinir sua senha.",
+    sendResetLink: "Enviar Link de Redefinição",
+    sendingLink: "Enviando link...",
   },
   es: {
     appName: "NEUROX",
@@ -200,6 +275,42 @@ const translations = {
     inStock: "En Stock",
     outOfStock: "Sin Stock",
     businessDays: "días hábiles",
+    username: "Nombre de Usuario",
+    confirmPassword: "Confirmar Contraseña",
+    invalidEmail: "Por favor, ingrese un correo válido",
+    usernameExists: "El nombre de usuario ya existe",
+    usernameAvailable: "¡Nombre de usuario disponible!",
+    passwordsDontMatch: "Las contraseñas no coinciden",
+    registerAsSeller: "Registrarse como Vendedor",
+    startSellingImmediately: "Comienza a vender productos inmediatamente",
+    storeNamePlaceholder: "Nombre de Tu Tienda",
+    agreeToTerms: "Acepto los",
+    termsOfService: "Términos de Servicio",
+    and: "y",
+    privacyPolicy: "Política de Privacidad",
+    creatingAccount: "Creando Cuenta...",
+    alreadyHaveAccount: "¿Ya tienes una cuenta?",
+    login: "Iniciar sesión",
+    accountCreated: "¡Cuenta Creada con Éxito!",
+    verificationEmailSent: "Se ha enviado un correo de verificación a:",
+    checkEmailInbox: "Por favor, revisa tu bandeja de entrada y haz clic en el enlace de verificación para activar tu cuenta.",
+    gotIt: "¡Entendido!",
+    continueWithGoogle: "Continuar con Google",
+    continueWithApple: "Continuar con Apple",
+    orContinueWith: "O continuar con correo",
+    forgotPassword: "¿Olvidaste tu contraseña?",
+    loggingIn: "Iniciando sesión...",
+    dontHaveAccount: "¿No tienes una cuenta?",
+    signUp: "Regístrate",
+    fillAllFields: "Por favor, completa todos los campos",
+    checkYourEmail: "Revisa Tu Correo",
+    resetLinkSent: "Hemos enviado un enlace de restablecimiento de contraseña a:",
+    resetLinkInstructions: "Haz clic en el enlace del correo para restablecer tu contraseña. El enlace expirará en 24 horas.",
+    backToLogin: "Volver al Inicio de Sesión",
+    close: "Cerrar",
+    forgotPasswordInstructions: "Ingresa tu dirección de correo y te enviaremos un enlace para restablecer tu contraseña.",
+    sendResetLink: "Enviar Enlace de Restablecimiento",
+    sendingLink: "Enviando enlace...",
   },
   fr: {
     appName: "NEUROX",
@@ -264,6 +375,42 @@ const translations = {
     inStock: "En Stock",
     outOfStock: "Rupture de Stock",
     businessDays: "jours ouvrables",
+    username: "Nom d'utilisateur",
+    confirmPassword: "Confirmer le Mot de Passe",
+    invalidEmail: "Veuillez entrer une adresse email valide",
+    usernameExists: "Le nom d'utilisateur existe déjà",
+    usernameAvailable: "Nom d'utilisateur disponible!",
+    passwordsDontMatch: "Les mots de passe ne correspondent pas",
+    registerAsSeller: "S'inscrire en tant que Vendeur",
+    startSellingImmediately: "Commencez à vendre des produits immédiatement",
+    storeNamePlaceholder: "Nom de Votre Boutique",
+    agreeToTerms: "J'accepte les",
+    termsOfService: "Conditions de Service",
+    and: "et",
+    privacyPolicy: "Politique de Confidentialité",
+    creatingAccount: "Création du Compte...",
+    alreadyHaveAccount: "Vous avez déjà un compte?",
+    login: "Se connecter",
+    accountCreated: "Compte Créé avec Succès!",
+    verificationEmailSent: "Un email de vérification a été envoyé à:",
+    checkEmailInbox: "Veuillez vérifier votre boîte de réception et cliquer sur le lien de vérification pour activer votre compte.",
+    gotIt: "Compris!",
+    continueWithGoogle: "Continuer avec Google",
+    continueWithApple: "Continuer avec Apple",
+    orContinueWith: "Ou continuer avec email",
+    forgotPassword: "Mot de passe oublié?",
+    loggingIn: "Connexion...",
+    dontHaveAccount: "Vous n'avez pas de compte?",
+    signUp: "S'inscrire",
+    fillAllFields: "Veuillez remplir tous les champs",
+    checkYourEmail: "Vérifiez Votre Email",
+    resetLinkSent: "Nous avons envoyé un lien de réinitialisation du mot de passe à:",
+    resetLinkInstructions: "Cliquez sur le lien dans l'email pour réinitialiser votre mot de passe. Le lien expirera dans 24 heures.",
+    backToLogin: "Retour à la Connexion",
+    close: "Fermer",
+    forgotPasswordInstructions: "Entrez votre adresse email et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+    sendResetLink: "Envoyer le Lien de Réinitialisation",
+    sendingLink: "Envoi du lien...",
   },
   de: {
     appName: "NEUROX",
@@ -328,6 +475,42 @@ const translations = {
     inStock: "Auf Lager",
     outOfStock: "Nicht Auf Lager",
     businessDays: "Werktage",
+    username: "Benutzername",
+    confirmPassword: "Passwort Bestätigen",
+    invalidEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    usernameExists: "Benutzername existiert bereits",
+    usernameAvailable: "Benutzername verfügbar!",
+    passwordsDontMatch: "Passwörter stimmen nicht überein",
+    registerAsSeller: "Als Verkäufer Registrieren",
+    startSellingImmediately: "Beginnen Sie sofort mit dem Verkauf von Produkten",
+    storeNamePlaceholder: "Name Ihres Shops",
+    agreeToTerms: "Ich stimme den",
+    termsOfService: "Nutzungsbedingungen",
+    and: "und",
+    privacyPolicy: "Datenschutzrichtlinie",
+    creatingAccount: "Konto Wird Erstellt...",
+    alreadyHaveAccount: "Haben Sie bereits ein Konto?",
+    login: "Anmelden",
+    accountCreated: "Konto Erfolgreich Erstellt!",
+    verificationEmailSent: "Eine Bestätigungs-E-Mail wurde gesendet an:",
+    checkEmailInbox: "Bitte überprüfen Sie Ihren Posteingang und klicken Sie auf den Bestätigungslink, um Ihr Konto zu aktivieren.",
+    gotIt: "Verstanden!",
+    continueWithGoogle: "Mit Google Fortfahren",
+    continueWithApple: "Mit Apple Fortfahren",
+    orContinueWith: "Oder mit E-Mail fortfahren",
+    forgotPassword: "Passwort vergessen?",
+    loggingIn: "Anmeldung...",
+    dontHaveAccount: "Haben Sie noch kein Konto?",
+    signUp: "Registrieren",
+    fillAllFields: "Bitte füllen Sie alle Felder aus",
+    checkYourEmail: "Überprüfen Sie Ihre E-Mail",
+    resetLinkSent: "Wir haben einen Link zum Zurücksetzen des Passworts gesendet an:",
+    resetLinkInstructions: "Klicken Sie auf den Link in der E-Mail, um Ihr Passwort zurückzusetzen. Der Link läuft in 24 Stunden ab.",
+    backToLogin: "Zurück zur Anmeldung",
+    close: "Schließen",
+    forgotPasswordInstructions: "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.",
+    sendResetLink: "Zurücksetzungslink Senden",
+    sendingLink: "Link wird gesendet...",
   },
   zh: {
     appName: "NEUROX",
@@ -392,6 +575,42 @@ const translations = {
     inStock: "有货",
     outOfStock: "缺货",
     businessDays: "工作日",
+    username: "用户名",
+    confirmPassword: "确认密码",
+    invalidEmail: "请输入有效的电子邮件地址",
+    usernameExists: "用户名已存在",
+    usernameAvailable: "用户名可用！",
+    passwordsDontMatch: "密码不匹配",
+    registerAsSeller: "注册为卖家",
+    startSellingImmediately: "立即开始销售产品",
+    storeNamePlaceholder: "您的商店名称",
+    agreeToTerms: "我同意",
+    termsOfService: "服务条款",
+    and: "和",
+    privacyPolicy: "隐私政策",
+    creatingAccount: "正在创建帐户...",
+    alreadyHaveAccount: "已有帐户？",
+    login: "登录",
+    accountCreated: "帐户创建成功！",
+    verificationEmailSent: "验证电子邮件已发送至：",
+    checkEmailInbox: "请检查您的收件箱并点击验证链接以激活您的帐户。",
+    gotIt: "知道了！",
+    continueWithGoogle: "使用Google继续",
+    continueWithApple: "使用Apple继续",
+    orContinueWith: "或使用电子邮件继续",
+    forgotPassword: "忘记密码？",
+    loggingIn: "正在登录...",
+    dontHaveAccount: "没有帐户？",
+    signUp: "注册",
+    fillAllFields: "请填写所有字段",
+    checkYourEmail: "检查您的电子邮件",
+    resetLinkSent: "我们已向以下地址发送了密码重置链接：",
+    resetLinkInstructions: "点击电子邮件中的链接以重置您的密码。该链接将在24小时后过期。",
+    backToLogin: "返回登录",
+    close: "关闭",
+    forgotPasswordInstructions: "输入您的电子邮件地址，我们将向您发送重置密码的链接。",
+    sendResetLink: "发送重置链接",
+    sendingLink: "正在发送链接...",
   },
   ja: {
     appName: "NEUROX",
@@ -456,6 +675,42 @@ const translations = {
     inStock: "在庫あり",
     outOfStock: "在庫切れ",
     businessDays: "営業日",
+    username: "ユーザー名",
+    confirmPassword: "パスワードを確認",
+    invalidEmail: "有効なメールアドレスを入力してください",
+    usernameExists: "ユーザー名は既に存在します",
+    usernameAvailable: "ユーザー名は利用可能です！",
+    passwordsDontMatch: "パスワードが一致しません",
+    registerAsSeller: "販売者として登録",
+    startSellingImmediately: "すぐに商品の販売を開始",
+    storeNamePlaceholder: "あなたのストア名",
+    agreeToTerms: "私は同意します",
+    termsOfService: "利用規約",
+    and: "と",
+    privacyPolicy: "プライバシーポリシー",
+    creatingAccount: "アカウントを作成中...",
+    alreadyHaveAccount: "既にアカウントをお持ちですか？",
+    login: "ログイン",
+    accountCreated: "アカウントが正常に作成されました！",
+    verificationEmailSent: "確認メールが送信されました：",
+    checkEmailInbox: "受信トレイを確認し、確認リンクをクリックしてアカウントをアクティブ化してください。",
+    gotIt: "了解しました！",
+    continueWithGoogle: "Googleで続行",
+    continueWithApple: "Appleで続行",
+    orContinueWith: "またはメールで続行",
+    forgotPassword: "パスワードをお忘れですか？",
+    loggingIn: "ログイン中...",
+    dontHaveAccount: "アカウントをお持ちでないですか？",
+    signUp: "サインアップ",
+    fillAllFields: "すべてのフィールドを入力してください",
+    checkYourEmail: "メールを確認してください",
+    resetLinkSent: "パスワードリセットリンクを送信しました：",
+    resetLinkInstructions: "メール内のリンクをクリックしてパスワードをリセットしてください。リンクは24時間後に期限切れになります。",
+    backToLogin: "ログインに戻る",
+    close: "閉じる",
+    forgotPasswordInstructions: "メールアドレスを入力すると、パスワードをリセットするためのリンクを送信します。",
+    sendResetLink: "リセットリンクを送信",
+    sendingLink: "リンクを送信中...",
   },
   ar: {
     appName: "NEUROX",
@@ -520,6 +775,42 @@ const translations = {
     inStock: "متوفر",
     outOfStock: "غير متوفر",
     businessDays: "أيام عمل",
+    username: "اسم المستخدم",
+    confirmPassword: "تأكيد كلمة المرور",
+    invalidEmail: "يرجى إدخال عنوان بريد إلكتروني صالح",
+    usernameExists: "اسم المستخدم موجود بالفعل",
+    usernameAvailable: "اسم المستخدم متاح!",
+    passwordsDontMatch: "كلمات المرور غير متطابقة",
+    registerAsSeller: "التسجيل كبائع",
+    startSellingImmediately: "ابدأ في بيع المنتجات على الفور",
+    storeNamePlaceholder: "اسم متجرك",
+    agreeToTerms: "أوافق على",
+    termsOfService: "شروط الخدمة",
+    and: "و",
+    privacyPolicy: "سياسة الخصوصية",
+    creatingAccount: "جاري إنشاء الحساب...",
+    alreadyHaveAccount: "هل لديك حساب بالفعل؟",
+    login: "تسجيل الدخول",
+    accountCreated: "تم إنشاء الحساب بنجاح!",
+    verificationEmailSent: "تم إرسال بريد إلكتروني للتحقق إلى:",
+    checkEmailInbox: "يرجى التحقق من صندوق الوارد الخاص بك والنقر على رابط التحقق لتفعيل حسابك.",
+    gotIt: "فهمت!",
+    continueWithGoogle: "المتابعة مع Google",
+    continueWithApple: "المتابعة مع Apple",
+    orContinueWith: "أو المتابعة بالبريد الإلكتروني",
+    forgotPassword: "نسيت كلمة المرور؟",
+    loggingIn: "جاري تسجيل الدخول...",
+    dontHaveAccount: "ليس لديك حساب؟",
+    signUp: "سجل",
+    fillAllFields: "يرجى ملء جميع الحقول",
+    checkYourEmail: "تحقق من بريدك الإلكتروني",
+    resetLinkSent: "لقد أرسلنا رابط إعادة تعيين كلمة المرور إلى:",
+    resetLinkInstructions: "انقر على الرابط في البريد الإلكتروني لإعادة تعيين كلمة المرور الخاصة بك. سينتهي الرابط خلال 24 ساعة.",
+    backToLogin: "العودة إلى تسجيل الدخول",
+    close: "إغلاق",
+    forgotPasswordInstructions: "أدخل عنوان بريدك الإلكتروني وسنرسل لك رابطًا لإعادة تعيين كلمة المرور الخاصة بك.",
+    sendResetLink: "إرسال رابط إعادة التعيين",
+    sendingLink: "جاري إرسال الرابط...",
   },
   ru: {
     appName: "NEUROX",
@@ -584,6 +875,42 @@ const translations = {
     inStock: "В Наличии",
     outOfStock: "Нет в Наличии",
     businessDays: "рабочих дней",
+    username: "Имя пользователя",
+    confirmPassword: "Подтвердите Пароль",
+    invalidEmail: "Пожалуйста, введите действительный адрес электронной почты",
+    usernameExists: "Имя пользователя уже существует",
+    usernameAvailable: "Имя пользователя доступно!",
+    passwordsDontMatch: "Пароли не совпадают",
+    registerAsSeller: "Зарегистрироваться как Продавец",
+    startSellingImmediately: "Начните продавать товары немедленно",
+    storeNamePlaceholder: "Название Вашего Магазина",
+    agreeToTerms: "Я согласен с",
+    termsOfService: "Условиями Обслуживания",
+    and: "и",
+    privacyPolicy: "Политикой Конфиденциальности",
+    creatingAccount: "Создание Аккаунта...",
+    alreadyHaveAccount: "Уже есть аккаунт?",
+    login: "Войти",
+    accountCreated: "Аккаунт Успешно Создан!",
+    verificationEmailSent: "Письмо с подтверждением отправлено на:",
+    checkEmailInbox: "Пожалуйста, проверьте свой почтовый ящик и нажмите на ссылку подтверждения, чтобы активировать свою учетную запись.",
+    gotIt: "Понятно!",
+    continueWithGoogle: "Продолжить с Google",
+    continueWithApple: "Продолжить с Apple",
+    orContinueWith: "Или продолжить с электронной почтой",
+    forgotPassword: "Забыли пароль?",
+    loggingIn: "Вход...",
+    dontHaveAccount: "Нет аккаунта?",
+    signUp: "Зарегистрироваться",
+    fillAllFields: "Пожалуйста, заполните все поля",
+    checkYourEmail: "Проверьте Вашу Электронную Почту",
+    resetLinkSent: "Мы отправили ссылку для сброса пароля на:",
+    resetLinkInstructions: "Нажмите на ссылку в письме, чтобы сбросить пароль. Ссылка истечет через 24 часа.",
+    backToLogin: "Вернуться к Входу",
+    close: "Закрыть",
+    forgotPasswordInstructions: "Введите свой адрес электронной почты, и мы отправим вам ссылку для сброса пароля.",
+    sendResetLink: "Отправить Ссылку для Сброса",
+    sendingLink: "Отправка ссылки...",
   },
   hi: {
     appName: "NEUROX",
@@ -648,6 +975,42 @@ const translations = {
     inStock: "स्टॉक में",
     outOfStock: "स्टॉक में नहीं",
     businessDays: "कार्य दिवस",
+    username: "उपयोगकर्ता नाम",
+    confirmPassword: "पासवर्ड की पुष्टि करें",
+    invalidEmail: "कृपया एक मान्य ईमेल पता दर्ज करें",
+    usernameExists: "उपयोगकर्ता नाम पहले से मौजूद है",
+    usernameAvailable: "उपयोगकर्ता नाम उपलब्ध है!",
+    passwordsDontMatch: "पासवर्ड मेल नहीं खाते",
+    registerAsSeller: "विक्रेता के रूप में पंजीकरण करें",
+    startSellingImmediately: "तुरंत उत्पाद बेचना शुरू करें",
+    storeNamePlaceholder: "आपके स्टोर का नाम",
+    agreeToTerms: "मैं सहमत हूं",
+    termsOfService: "सेवा की शर्तें",
+    and: "और",
+    privacyPolicy: "गोपनीयता नीति",
+    creatingAccount: "खाता बनाया जा रहा है...",
+    alreadyHaveAccount: "पहले से खाता है?",
+    login: "लॉग इन करें",
+    accountCreated: "खाता सफलतापूर्वक बनाया गया!",
+    verificationEmailSent: "एक सत्यापन ईमेल भेजा गया है:",
+    checkEmailInbox: "कृपया अपने इनबॉक्स की जांच करें और अपने खाते को सक्रिय करने के लिए सत्यापन लिंक पर क्लिक करें।",
+    gotIt: "समझ गया!",
+    continueWithGoogle: "Google के साथ जारी रखें",
+    continueWithApple: "Apple के साथ जारी रखें",
+    orContinueWith: "या ईमेल के साथ जारी रखें",
+    forgotPassword: "पासवर्ड भूल गए?",
+    loggingIn: "लॉग इन हो रहा है...",
+    dontHaveAccount: "खाता नहीं है?",
+    signUp: "साइन अप करें",
+    fillAllFields: "कृपया सभी फ़ील्ड भरें",
+    checkYourEmail: "अपना ईमेल जांचें",
+    resetLinkSent: "हमने पासवर्ड रीसेट लिंक भेजा है:",
+    resetLinkInstructions: "अपना पासवर्ड रीसेट करने के लिए ईमेल में लिंक पर क्लिक करें। लिंक 24 घंटे में समाप्त हो जाएगा।",
+    backToLogin: "लॉगिन पर वापस जाएं",
+    close: "बंद करें",
+    forgotPasswordInstructions: "अपना ईमेल पता दर्ज करें और हम आपको अपना पासवर्ड रीसेट करने के लिए एक लिंक भेजेंगे।",
+    sendResetLink: "रीसेट लिंक भेजें",
+    sendingLink: "लिंक भेजा जा रहा है...",
   },
 };
 
@@ -923,6 +1286,7 @@ const stocks: Stock[] = [
 
 type Tab = "feed" | "marketplace" | "market" | "profile";
 type Language = keyof typeof translations;
+type AuthModalType = "signup" | "login" | "forgot" | null;
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<Tab>("marketplace");
@@ -933,7 +1297,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [feedSearchQuery, setFeedSearchQuery] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [authModalType, setAuthModalType] = useState<AuthModalType>(null);
   const [language, setLanguage] = useState<Language>("en");
   const [country, setCountry] = useState("US");
   const [showLanguageModal, setShowLanguageModal] = useState(false);
@@ -1258,7 +1622,7 @@ export default function Home() {
           {/* CTA Button */}
           <Button 
             size="lg"
-            onClick={() => !isAuthenticated && setShowAuthModal(true)}
+            onClick={() => !isAuthenticated && setAuthModalType("signup")}
             className="w-full bg-white hover:bg-gray-100 text-black font-bold text-lg py-6 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-[1.02]"
           >
             <ShoppingCart className="w-5 h-5 mr-2" />
@@ -1439,7 +1803,7 @@ export default function Home() {
                 </div>
                 <Button 
                   size="sm" 
-                  onClick={() => !isAuthenticated && setShowAuthModal(true)}
+                  onClick={() => !isAuthenticated && setAuthModalType("signup")}
                   className="w-full bg-black hover:bg-gray-800 text-white rounded-xl"
                 >
                   <ShoppingCart className="w-4 h-4 mr-2" />
@@ -1707,7 +2071,7 @@ export default function Home() {
               {t.loginMessage}
             </p>
             <Button
-              onClick={() => setShowAuthModal(true)}
+              onClick={() => setAuthModalType("login")}
               className="w-full bg-black hover:bg-gray-800 text-white rounded-xl py-6 text-lg font-semibold"
             >
               {t.loginCreate}
@@ -1715,50 +2079,6 @@ export default function Home() {
           </Card>
         </div>
       )}
-    </div>
-  );
-
-  // Auth Modal
-  const AuthModal = () => (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-6">
-      <Card className="w-full max-w-md p-8 bg-white border-2 border-gray-200">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-gray-900">{t.createAccount}</h2>
-          <Button variant="ghost" size="icon" onClick={() => setShowAuthModal(false)}>
-            <X className="w-5 h-5" />
-          </Button>
-        </div>
-        <div className="space-y-4">
-          <div>
-            <label className="text-sm font-medium text-gray-700 mb-2 block">{t.fullName}</label>
-            <Input placeholder="John Smith" className="rounded-xl border-gray-300" />
-          </div>
-          <div>
-            <label className="text-sm font-medium text-gray-700 mb-2 block">{t.email}</label>
-            <Input type="email" placeholder="john@example.com" className="rounded-xl border-gray-300" />
-          </div>
-          <div>
-            <label className="text-sm font-medium text-gray-700 mb-2 block">{t.password}</label>
-            <Input type="password" placeholder="••••••••" className="rounded-xl border-gray-300" />
-          </div>
-          <Button
-            onClick={() => {
-              setIsAuthenticated(true);
-              setShowAuthModal(false);
-            }}
-            className="w-full bg-black hover:bg-gray-800 text-white rounded-xl py-6 text-lg font-semibold"
-          >
-            {t.createAccount}
-          </Button>
-          <Button
-            variant="outline"
-            onClick={() => setShowAuthModal(false)}
-            className="w-full rounded-xl border-2 border-gray-200"
-          >
-            {t.cancel}
-          </Button>
-        </div>
-      </Card>
     </div>
   );
 
@@ -1840,7 +2160,39 @@ export default function Home() {
       </div>
 
       {/* Modals */}
-      {showAuthModal && <AuthModal />}
+      {authModalType === "signup" && (
+        <SignupModal
+          onClose={() => setAuthModalType(null)}
+          onSuccess={() => {
+            setIsAuthenticated(true);
+            setAuthModalType(null);
+          }}
+          onSwitchToLogin={() => setAuthModalType("login")}
+          translations={t}
+        />
+      )}
+      
+      {authModalType === "login" && (
+        <LoginModal
+          onClose={() => setAuthModalType(null)}
+          onSuccess={() => {
+            setIsAuthenticated(true);
+            setAuthModalType(null);
+          }}
+          onSwitchToSignup={() => setAuthModalType("signup")}
+          onForgotPassword={() => setAuthModalType("forgot")}
+          translations={t}
+        />
+      )}
+      
+      {authModalType === "forgot" && (
+        <ForgotPasswordModal
+          onClose={() => setAuthModalType(null)}
+          onBackToLogin={() => setAuthModalType("login")}
+          translations={t}
+        />
+      )}
+      
       {showLanguageModal && <LanguageModal />}
       {selectedStock && <StockChartModal stock={selectedStock} />}
     </div>
